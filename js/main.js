@@ -4,6 +4,9 @@ const yrear = document.getElementById("year");
 
 yrear.innerHTML = date.getFullYear();
 
+const menu = document.querySelector(".menu_toggle");
+const nav  = document.querySelector("nav");
+
 // برمجة القائمة المنسدلة
 
 //1
@@ -21,6 +24,7 @@ optionList.forEach(o => {
     o.addEventListener("click", () =>{
         selected.innerHTML = o.querySelector("label").innerHTML;
         optionsContainer.classList.remove("active");
+        
     });
 });
 
@@ -69,11 +73,26 @@ filtr.addEventListener("click", () =>{
     selectBox.classList.toggle("active");
     selectBox2.classList.toggle("active");
     selectBox3.classList.toggle("active");
+    selectBox.style.display = "flex";
+    selectBox2.style.display = "flex";
+    selectBox3.style.display = "flex";
+    nav.classList.remove("active");
 });
 
-// إذا تحرك أخف لي القائمة المنسدلة
+// إذا تحرك أخف لي بعض العناصر
 window.onscroll = () =>{
     selectBox.classList.remove('active');
     selectBox2.classList.remove("active");
     selectBox3.classList.remove("active");
+    nav.classList.remove("active");
 };
+
+menu.addEventListener("click", function(){
+    nav.classList.toggle("active");
+    selectBox.style.display = "none";
+    selectBox2.style.display = "none";
+    selectBox3.style.display = "none";
+    selectBox.classList.remove("active");
+    selectBox2.classList.remove("active");
+    selectBox3.classList.remove("active");
+})
