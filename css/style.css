@@ -46,6 +46,13 @@ body
 /* تصميم رأس الصفحة */
 header
 {
+    /* position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 100px;
+    background: rgba(37, 37, 37, 1);
+    width: 100%; */
+
     display: flex;
     height: 50px;
     justify-content: space-between;
@@ -73,17 +80,30 @@ header
     right: 17%;
 }
 
-.buttons
+header nav
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    float: left;
 }
 
-.login, .signUp
+header nav ul
 {
-    margin-top: 0;
+    display: flex;
+
 }
+
+header nav ul li
+{
+    list-style: none;
+}
+
+header nav ul li a
+{
+    height: 50px;
+    line-height: 50px;
+    /* padding: 0 20px; */
+    color: #fff;
+    display: block;
+} 
 
 .login
 {
@@ -111,12 +131,23 @@ header
     transition: all 0.3s ease 0s;
 }
 
-.sala img
+.sala
 {
     width: 40px;
     position: absolute;
     top: 8px;
     left: 1%;
+}
+
+.menu_toggle
+{
+    color: #fff;
+    float: left;
+    line-height: 50px;
+    font-size: 24px;
+    margin-top:10px;
+    cursor: pointer;
+    display: none;
 }
 
 /* تصميم القائمة المنسدلة */
@@ -125,7 +156,6 @@ header
 .select_box2,
 .select_box3
 {
-    display: flex;
     width: 286px;
     flex-direction: column;
     color: #fff;
@@ -133,6 +163,7 @@ header
     opacity: 0;
     transition: all 0.4s;
     order: 1;
+    display: none;
 }
 
 .select_box.active,
