@@ -18,38 +18,49 @@
 </head>
 <body>
 
-    <!-- بداية رأس الصفحة -->
+           <!-- بداية رأس الصفحة -->
     <header>
 
-        <div class="logo">
-            <img src="./images/logo.png" alt="" />
+                <a href="index.html" class="logo">
+                    <img src="./images/logo.png" alt="Logo" />
+                </a>
 
-        </div>
-
-            <img src="./images/Group.png" class="filtr" alt="filtr" />
-
+                <img src="./images/Group.png" class="filtr" alt="filtr" />
+    
+                
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./signUp.html">
+                            <button class="signUp">
+                                إنشاء الحساب
+                            </button>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./login.html">
+                            <button class="login">
+                                تسجيل الدخول
+                            </button>
+                        </a>
+                    </li>
             
-        <div class="buttons">
-        <a href="./signUp.html">
-            <button class="signUp">
-                إنشاء الحساب
-            </button>
-        </a>
-        
-        <a href="./login.html">
-            <button class="login">
-                تسجيل الدخول
-            </button>
-        </a>
+                
+                    <li>
+                        <a href="./cart.html" >
+                            <img src="./images/add_cart.png" class="sala" alt="أيقونة سلة" title="للذهاب إلى المنتجات التي تمت إضافتها"/>
+                        </a>
+                    </li>
+                </ul>
 
     
-        <a href="./cart.html" class="sala">
-            <img src="./images/add_cart.png" alt="أيقونة سلة" title="للذهاب إلى المنتجات التي تمت إضافتها"/>
-        </a>
-</div>
+            </nav>
 
+    <div class="menu_toggle"> <i class="fa fa-bars"></i> </div>
+    
     </header>
-    <!-- نهاية رأس الصفحة -->
+        <!-- نهاية رأس الصفحة -->
 
     <!-- بداية القائمة المنسدلة -->
 
@@ -387,9 +398,11 @@
     <!-- نهاية جزء أسفل الصفحة -->
 
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
      <!-- مكتبة sweetalert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="./js/alert.js"></script>
+
     <!-- custom js -->
     <script src="./js/main.js"></script>
 </body>
